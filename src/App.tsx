@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 export default function App() {
-  const [conversion, setConversion] = useState({ rupee: null, dollar: null });
+  const [conversion, setConversion] = useState({ rupee: 0, dollar: 0 });
   const handleChangeRupee = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     const conversionRate = 0.012; // in dollars
     const convertedRes = parseFloat(value) * conversionRate;
-    setConversion({ ...conversion, rupee: value, dollar: convertedRes });
+    setConversion({ ...conversion, rupee: parseFloat(value), dollar: convertedRes });
   };
   const handleChangeDollar = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     const conversionRate = 88.26; // in dollars
     const convertedRes = parseFloat(value) * conversionRate;
-    setConversion({ ...conversion, dollar: value, rupee: convertedRes });
+    setConversion({ ...conversion, dollar: parseFloat(value), rupee: convertedRes });
   };
   return (
     <>

@@ -15,6 +15,24 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "react-scripts": "latest"
+    "@vitejs/plugin-react": "^4.5.1",
+    "react-scripts": "latest",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  },
+  "stackblitz": {
+    "startCommand": "npm run dev"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
